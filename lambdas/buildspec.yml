@@ -1,0 +1,6 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - chmod 0755 ./lambdas/build.sh
+      - /bin/bash -x ./lambdas/build.sh ${LambdaBucket} ${LambdaVersion}
